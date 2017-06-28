@@ -23,6 +23,12 @@
                     }
                   });
 
+        var procedure = smart.patient.api.fetchAll({
+                    type: 'Procedure'
+                  });
+        console.log("Texting Procedure");
+        console.log(procedure);
+
         $.when(pt, obv).fail(onError);
 
         $.when(pt, obv).done(function(patient, obv) {
